@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quản trị Danh mục</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+    }
+    .sidebar {
+      width: 220px;
+      background: #f7f7f7;
+      position: fixed;
+      height: 100vh;
+      border-right: 1px solid #ccc;
+      padding: 15px;
+    }
+    .sidebar h3 {
+      margin-top: 0;
+    }
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #f0f0f0;
+    }
+    input[type="text"] {
+      padding: 6px;
+      margin-right: 5px;
+    }
+    .btn {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-danger {
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h3>Trang chủ Admin</h3>
+    <p>→ Quản trị Danh mục</p>
+    <p>→ Loại danh mục</p>
+    <p>→ Sản phẩm</p>
+    <p>→ Bài viết</p>
+    <p>→ Quản trị giao diện</p>
+    <p>→ Quản trị thông tin</p>
+    <p>→ SEO Website</p>
+    <p>→ Cấu hình User</p>
+  </div>
+
+  <div class="content">
+    <h2>Quản lý loại danh mục</h2>
+    <input type="text" id="searchInput" placeholder="Tìm kiếm danh mục..." />
+    <button class="btn" onclick="addNew()">+ Thêm mới</button>
+
+    <table id="categoryTable">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Danh mục</th>
+          <th>Hình ảnh</th>
+          <th>Module</th>
+          <th>Trang chủ</th>
+          <th>Danh mục</th>
+          <th>Hiển thị</th>
+          <th>Tác vụ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dữ liệu mẫu -->
+        <tr>
+          <td>1</td>
+          <td>Giới thiệu</td>
+          <td>--</td>
+          <td>Bài viết</td>
+          <td><input type="checkbox" checked></td>
+          <td><input type="checkbox" checked></td>
+          <td><input type="checkbox" checked></td>
+          <td><span class="btn-danger" onclick="deleteRow(this)">✖</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sản phẩm</td>
+          <td>--</td>
+          <td>Sản phẩm</td>
+          <td><input type="checkbox" checked></td>
+          <td><input type="checkbox" checked></td>
+          <td><input type="checkbox" checked></td>
+          <td><span class="btn-danger" onclick="deleteRow(this)">✖</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Vòng phượng hoàng</td>
+          <td>--</td>
+          <td>Sản phẩm</td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox" checked></td>
+          <td><span class="btn-danger" onclick="deleteRow(this)">✖</span></td>
+        </tr>
+        <!-- Thêm dòng khác tương tự -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function deleteRow(btn) {
+      if (confirm("Bạn có chắc chắn muốn xóa?")) {
+        btn.closest("tr").remove();
+      }
+    }
+
+    function addNew() {
+      alert("Chức năng thêm mới chưa được xử lý.");
+    }
+
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll("#categoryTable tbody tr");
+      rows.forEach(row => {
+        const name = row.cells[1].textContent.toLowerCase();
+        row.style.display = name.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

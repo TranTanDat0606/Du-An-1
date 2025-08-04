@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt hàng trang sức</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="ảnh/logo.jpg" alt="DLK Logo">
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Trang Sức</a></li>
+        <li><a href="#">Trang Sức Cưới</a></li>
+        <li><a href="#">Đồng Hồ</a></li>
+        <li><a href="#">Quà Tặng</a></li>
+        <li><a href="#">Thương Hiệu</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Khuyến Mãi</a></li>
+      </ul>
+          <div class="search">
+      <input type="text" placeholder="Tìm kiếm nhanh">
+    </div>
+    </nav>
+  </div>
+</header>
+
+<body>
+  <div class="container">
+    <!-- HÌNH ẢNH + MÔ TẢ SẢN PHẨM -->
+    <div class="product-info">
+      <div class="product-images">
+        <img src="ảnh/ảnh 1.jpg" alt="Ảnh 1" />
+        <img src="ảnh/ảnh 2.jpg" alt="Ảnh 2" />
+        <img src="ảnh/ảnh 3.jpg" alt="Ảnh 3" />
+        <img src="ảnh/ảnh 4.png" alt="Ảnh 4" />
+      </div>
+
+      <div class="product-description">
+        <p><strong>Mã sản phẩm:</strong> 700045A</p>
+        <p><strong>Xuất xứ:</strong> Việt Nam</p>
+        <p><strong>Giá:</strong> 14,270,000đ (bao gồm VAT)</p>
+        <p><strong>Phí vận chuyển:</strong> Miễn phí</p>
+        <p><strong>Ưu đãi:</strong> Tặng hộp quà, phiếu bảo hành</p>
+      </div>
+    </div>
+
+    <!-- FORM THÔNG TIN NGƯỜI MUA -->
+    <div class="customer-info">
+      <div class="form-header">
+        <h2>THÔNG TIN NGƯỜI DÙNG</h2>
+        <button class="continue-btn">→ TIẾP TỤC MUA HÀNG</button>
+      </div>
+
+      <form>
+        <label>Họ và tên:</label>
+        <input type="text" name="fullname" />
+
+        <label>SĐT:</label>
+        <input type="tel" name="phone" />
+
+        <label>Email:</label>
+        <input type="email" name="email" />
+
+        <label>Ngày sinh:</label>
+        <input type="date" name="birthday" />
+
+        <div class="gender-row">
+          <label><input type="radio" name="gender" /> Nam</label>
+          <label><input type="radio" name="gender" /> Nữ</label>
+        </div>
+        
+<div class="delivery-method">
+  <p>Phương thức nhận hàng:</p>
+  <label>
+    <input type="radio" name="delivery" value="home" />
+    Giao hàng tận nơi (áp dụng nội thành HCM)
+  </label>
+  <label>
+    <input type="radio" name="delivery" value="store" />
+    Đến cửa hàng nhận
+  </label>
+</div>
+
+
+
+        <label>Tỉnh/Thành:</label>
+        <select>
+          <option>-Chọn Tỉnh Thành-</option>
+          <option>Cao Bằng</option>
+          <option>Lào Cai</option>
+          <option>Sơn La</option>
+          <option>Lai Châu</option>
+          <option>Lạng Sơn</option>
+          <option>Tuyên Quang</option>
+          <option>Thái Nguyên</option>
+          <option>Điện Biên</option>
+          <option>Phú Thọ</option>
+          <option>Bắc Ninh</option>
+          <option>Hà Nội</option>
+          <option>Quảng Ninh</option>
+          <option>Hải Phòng</option>
+          <option>Hưng Yên</option>
+          <option>Ninh Bình</option>
+          <option>Thanh Hóa</option>
+          <option>Nghệ An</option>
+          <option>Hà Tĩnh</option>
+          <option>Quảng Trị</option>
+          <option>Huế</option>
+          <option>Đà Nẵng</option>
+          <option>Quảng Ngãi</option>
+          <option>Gia Lai</option>
+          <option>Đắk Lắk</option>
+          <option>Khánh Hòa</option>
+          <option>Lâm Đồng</option>
+          <option>Tây Ninh</option>
+          <option>Đồng Nai</option>
+          <option>Thành phố Hồ Chí Minh</option>
+          <option>Đồng Tháp</option>
+          <option>An Giang</option>
+          <option>Vĩnh Long</option>
+          <option>Cần Thơ</option>
+          <option>Cà Mau</option>
+        </select>
+
+
+        <label>Chọn Quận/Huyện:</label>
+        <select>
+          <option>-Chọn Quận/Huyện-</option>
+          <option>Quận 1</option>
+          <option>Quận 3</option>
+          <option>Quận 4</option>
+          <option>Quận 5</option>
+          <option>Quận 6</option>
+          <option>Quận 7</option>
+          <option>Quận 8</option>
+          <option>Quận 10</option>
+          <option>Quận 11</option>
+          <option>Quận 12</option>
+          <option>Quận Bình Tân</option>
+          <option>Quận Bình Thạnh</option>
+          <option>Quận Tân Bình</option>
+          <option>Quận Tân Phú</option>
+          <option>Quận Phú Nhuận</option>
+          <option>Quận Gò Vấp</option>
+          <option>Huyện Củ Chi</option>
+          <option>Huyện Nhà Bè</option>
+          <option>Huyện Hóc Môn</option>
+        </select>
+
+        <label>Địa chỉ:</label>
+        <textarea placeholder="Nhập địa chỉ..."></textarea>
+
+        <div class="checkboxes">
+          <label><input type="checkbox" /> Xuất hóa đơn công ty(không áp dụng phiếu quà tặng điện tử)</label>
+          <label><input type="checkbox" /> Đồng ý nhận thông tin khuyến mãi</label>
+          <label><input type="checkbox" /> Đồng ý xử lý dữ liệu cá nhân</label>
+          <label><input type="checkbox" /> Nhận thiệp chúc mừng</label>
+            </div>
+        
+ <main class="order-page">
+    <h2>Thông tin người mua</h2>
+
+    <form action="/success.html" method="get">
+      <label>Họ và tên:</label>
+      <input type="text" name="fullname" placeholder="Nhập họ tên">
+
+      <label>Số điện thoại:</label>
+      <input type="tel" name="phone" placeholder="SĐT">
+
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="Email">
+
+      <label>Địa chỉ:</label>
+      <input type="text" name="address" placeholder="Địa chỉ nhận hàng">
+
+      <label>Phương thức nhận hàng:</label><br>
+      <input type="radio" name="delivery" value="giao_hang" checked> Giao hàng tận nơi
+      <input type="radio" name="delivery" value="den_cua_hang"> Đến cửa hàng lấy
+
+      <br><br>
+
+      <button type="submit">Đặt hàng</button>
+    </form>
+  </main>
+      </form>
+      
+</footer>
+
+
+
+    </div>
+  </div>
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <p><strong>2017 Công Ty Cổ Phần Vàng Bạc Đá Quý Phú Nhuận</strong></p>
+      <p>170E Phan Đăng Lưu, Phường Đức Nhuận, TP.Hồ Chí Minh</p>
+      <p>ĐT: 0321821361 - MST: 12345678</p>
+    </div>
+    <div class="footer-column">
+      <p><strong>Về DLK</strong></p>
+      <ul>
+        <li><a href="#">Quan hệ cổ đông (IR)</a></li>
+        <li><a href="#">Tuyển dụng</a></li>
+        <li><a href="#">Xuất khẩu</a></li>
+        <li><a href="#">Kinh doanh sỉ</a></li>
+        <li><a href="#">Kiểm định kim cương</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <p><strong>Kết nối với chúng tôi</strong></p>
+      <div class="social-icons">
+        <img src="ảnh/Facebook_Logo_(2019).png" alt="Facebook" />
+        <!-- bạn có thể thêm icon khác -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

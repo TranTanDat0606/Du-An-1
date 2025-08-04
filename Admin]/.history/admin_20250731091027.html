@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Quản lý danh mục</title>
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+<header class="admin-navbar">
+    <div class="admin-navbar-item left">Adminnistrator</div>
+    <a href="#" class="admin-navbar-item">← Vào trang web</a>
+    <a href="#" class="admin-navbar-item">Liên hệ</a>
+    <a href="#" class="admin-navbar-item">Đơn hàng</a>
+</header>
+    <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="title">Trang chủ Admin</div>
+        <ul class="menu">
+        <li><strong>→ Quản trị Danh mục ▼</strong>
+        <ul class="submenu">
+            <li><a href="#">→ Loại danh mục</a></li>
+        </ul>
+        </li>
+        <li>→ Sản phẩm</li>
+        <li>→ Bài viết</li>
+        <li>Quản trị giao diện ▼</li>
+        <li>$ Quản trị thông tin ▼</li>
+        <li>→ SEO Website</li>
+        <li>→ Cấu hình User</li>
+    </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+    <!-- Breadcrumb -->
+        <div class="breadcrumb">
+        <a href="#">Trang chủ</a> → <a href="#">Danh mục</a> → <span>Loại danh mục</span>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <select>
+    <option>Tác vụ ↓</option>
+        </select>
+        <input type="text" placeholder="Tìm kiếm">
+        <select>
+        <option>Tìm theo ↓</option>
+        </select>
+        <select>
+        <option>Số hiển thị ↓</option>
+        </select>
+        <button class="btn-add">+ Thêm mới</button>
+        </div>
+
+        <!-- Data Table -->
+        <table class="category-table">
+        <thead>
+        <tr>
+            <th><input type="checkbox"></th>
+            <th>STT</th>
+            <th>Danh mục</th>
+            <th>Hình ảnh</th>
+            <th>Module</th>
+            <th>Trang chủ</th>
+            <th>Danh mục</th>
+            <th>Hiển thị</th>
+            <th>Tác vụ</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox"></td><td>1</td>
+            <td><a href="#">Giới thiệu</a></td><td></td><td>Bài viết</td>
+            <td><input type="checkbox" checked></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><span class="delete">✖</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td><td>2</td>
+            <td><a href="#">Sản Phẩm</a></td><td></td><td>Sản Phẩm</td>
+            <td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox"></td>
+            <td><span class="delete">✖</span></td>
+            </tr>
+        <tr>
+            <td><input type="checkbox"></td><td>11</td>
+            <td><a href="#">Vòng phượng hoàng</a></td><td></td><td>Sản Phẩm</td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><span class="delete">✖</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td><td>12</td>
+            <td><a href="#">Dây chuyền rồng vàng</a></td><td></td><td>Sản Phẩm</td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><span class="delete">✖</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td><td>7</td>
+            <td><a href="#">Giỏ hàng</a></td><td></td><td>Giỏ hàng</td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><span class="delete">✖</span></td>
+            </tr>
+        <tr>
+            <td><input type="checkbox"></td><td>6</td>
+            <td><a href="#">Tin tức</a></td><td></td><td>Bài viết</td>
+            <td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox"></td>
+            <td><span class="delete">✖</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td><td>7</td>
+            <td><a href="#">Liên hệ</a></td><td></td><td>Liên hệ</td>
+            <td><input type="checkbox"></td><td><input type="checkbox" checked></td><td><input type="checkbox"></td>
+            <td><span class="delete">✖</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>    
+</body>
+</html>

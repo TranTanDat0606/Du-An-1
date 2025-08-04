@@ -1,0 +1,1 @@
+chọn tất cả các checkbox

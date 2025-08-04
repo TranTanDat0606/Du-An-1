@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Quản lý danh mục</title>
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+    <header class="topbar">
+    <div class="topbar-left">Administrator</div>
+    <div class="topbar-right">
+    <a href="#">← Vào trang web</a>
+    <a href="#">Liên hệ</a>
+    <a href="#">Đơn hàng</a></div>
+</header>
+    <div class="admin-container">
+    <aside class="sidebar">
+    <!-- <h2>Trang chủ Admin</h2> -->
+    <ul>
+        <li>→ Quản trị Danh mục
+    <ul class="submenu">
+            <li><a href="#">Loại danh mục</a></li>
+    </ul>
+        </li>
+        <li>→ Sản phẩm</li>
+        <li>→ Bài viết</li>
+        <li>→ Quản trị giao diện</li>
+        <li>→ Quản trị thông tin</li>
+        <li>⋯ SEO Website</li>
+        <li>→ Cấu hình User</li>    
+    </ul>
+    </aside>
+    <main class="main-content">
+    <div class="header-bar">
+        <span class="breadcrumbs">Trang chủ → Danh mục → Loại danh mục</span>
+        <button class="btn-new">+ Thêm mới</button>
+    </div>
+
+    <div class="table-toolbar">
+        <input type="text" class="search-input" placeholder="Tìm kiếm danh mục..." />
+        <select>
+    <option>Số hiển thị</option>
+        </select>
+    </div>  
+    <table>
+        <thead>
+    <tr>
+            <th><input type="checkbox" /></th>
+            <th>STT</th>
+            <th>Danh mục</th>
+            <th>Hình ảnh</th>
+            <th>Module</th>
+            <th>Trang chủ</th>
+            <th>Danh mục</th>
+            <th>Hiển thị</th>
+            <th>Tác vụ</th>
+    </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td><input type="checkbox" /></td>
+            <td>1</td>
+            <td><a href="#">Giới thiệu</a></td>
+            <td>--</td>
+            <td>Bài viết</td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" /></td>
+            <td class="text-danger">✖</td>
+    </tr>
+    <tr>
+            <td><input type="checkbox" /></td>
+            <td>2</td>
+            <td><a href="#">Sản phẩm</a></td>
+            <td>--</td>
+            <td>Sản Phẩm</td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" /></td>
+            <td class="text-danger">✖</td>
+    </tr>
+        </tbody>
+    </table>
+    </main>
+    </div>
+</body>
+</html>

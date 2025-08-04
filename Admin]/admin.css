@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* header */
+/* Thanh navbar admin */
+.admin-navbar {
+    display: flex;
+    background-color: #35333f;
+    /* Màu nền đậm */
+    color: #fff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.admin-navbar-item {
+    padding: 30px 25px;
+    color: #fff;
+    text-decoration: none;
+    border-left: 1px solid #5c5a65;
+    /* Đường kẻ giữa các mục */
+    display: flex;
+    align-items: center;
+}
+/* Mục đầu tiên không có đường viền trái */
+.admin-navbar-item.left {
+    border-left: none;
+    font-weight: bold;
+}
+/* Topbar admin */
+.topbar {
+    background-color: #2f2e38;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    font-size: 24px;
+}
+
+.topbar-left {
+    font-weight: bold;
+    
+}
+
+.topbar-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 100px;
+    border-left:4px solid #555;
+    padding-left: 170px
+}
+
+.topbar-right a:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    border-right: 1px solid #ccc;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 15px;
+}
+
+/* Main content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+.breadcrumb a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.toolbar input[type="text"],
+.toolbar select {
+    padding: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn-add {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Table */
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.category-table th,
+.category-table td {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.category-table td a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+}

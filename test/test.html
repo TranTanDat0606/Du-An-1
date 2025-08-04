@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Logo riêng phía trên cùng -->
+    <div class="logo-top">
+      <img src="img/logo.jpg" alt="DLK Logo" class="logo" />
+    </div>
+  
+    <header class="header">
+      <div class="container header-container">
+        <!-- Bỏ logo ở đây -->
+        <nav class="nav-menu">
+            <a href="#">Trang Sức</a>
+            <a href="#">Trang Sức Cưới</a>
+            <a href="#">Đồng Hồ</a>
+            <a href="#">Quà Tặng</a>
+            <a href="#">Thương Hiệu</a>
+            <a href="#">Blog</a>
+            <a href="#">Khuyến Mãi</a>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /><div class="search">
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm nhanh" />
+                    <i class="fas fa-search search-icon-right"></i>
+                  </div>                                
+          </nav>          
+      </div>
+    </header>
+  
+    <main class="container product-page">
+      <div class="product-gallery">
+        <div class="thumbnails-vertical">
+          <img src="img/anh1.jpg" onclick="changeImage(this)" />
+          <img src="img/anh2.jpg" onclick="changeImage(this)" />
+          <img src="img/anh3.jpg" onclick="changeImage(this)" />
+          <img src="img/anh4.jpg" onclick="changeImage(this)" />
+        </div>
+        <img id="main-image" src="img/anh1.jpg" alt="Main Image" />
+      </div>
+  
+    <div class="product-info">
+      <h1>Mặt dây chuyền Kim cương Vàng trắng 14K</h1>
+      <p class="price">11.420.000đ</p>
+      <p class="status">Còn hàng – Gọi <strong>1800 545457</strong> để đặt trước</p>
+      <button class="buy-now">MUA NGAY</button>
+      <button class="add-cart">THÊM VÀO GIỎ</button>
+
+      <div class="tabs">
+        <button onclick="openTab('specs')">Mô tả sản phẩm</button>
+        <button onclick="openTab('policy')">Chính sách</button>
+        <button onclick="openTab('faq')">Câu hỏi</button>
+      </div>
+
+      <div class="tab-content" id="specs">Chi tiết sản phẩm...</div>
+      <div class="tab-content" id="policy" style="display: none;">Chính sách đổi trả...</div>
+      <div class="tab-content" id="faq" style="display: none;">Câu hỏi thường gặp...</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <strong>DLK</strong> – 170E Phan Đăng Lưu, Q. Phú Nhuận, TP.HCM – MST: 12345678
+      </div>
+      <div>
+        Về DLK: Quan hệ cổ đông, Tuyển dụng, Xuất khẩu, Kinh doanh sỉ
+      </div>
+      <div>
+        Kết nối: <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/145/145802.png" alt="Facebook"/></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
+v

@@ -1,0 +1,268 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Reset and base styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid #eee;
+  padding: 1.5rem 0;
+  background-color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-size: 17px;
+}
+
+.nav-menu a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #22c55e;
+}
+
+.logo {
+  max-height: 100px;
+}
+
+/* Search */
+.search {
+  position: relative;
+  display: inline-block;
+}
+
+.search input {
+  padding: 10px 14px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  padding-right: 35px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+  outline: none;
+}
+
+.search-icon-right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+/* Product page */
+.product-page {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-gallery {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.product-gallery img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.thumbnails-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnails-vertical img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border 0.2s;
+}
+
+.thumbnails-vertical img:hover {
+  border: 2px solid #22c55e;
+}
+
+#main-image {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.product-info {
+  width: 50%;
+}
+
+.price {
+  color: #e11d48;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+button {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.6rem 1.2rem;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #16a34a;
+  transform: scale(1.02);
+}
+
+.tabs button {
+  background: #f3f4f6;
+  margin: 0.5rem 0.5rem 0 0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tab-content {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+/* Logo Top */
+.logo-top {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.logo-top img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Form styling */
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 15px;
+}
+
+.input-text {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-text:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+  outline: none;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: #22c55e;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+}
+
+/* Footer */
+.footer {
+  margin-top: 4rem;
+  border-top: 1px solid #eee;
+  padding: 2rem 1rem;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #555;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  text-align: left;
+}
+
+.footer .container div {
+  flex: 1;
+  min-width: 200px;
+  line-height: 1.6;
+}
+
+.footer a img {
+  margin-top: 10px;
+  width: 24px;
+  height: 24px;
+}

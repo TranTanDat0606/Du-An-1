@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DLK - Mặt dây chuyền Kim cương</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm p-3 mb-4 text-center">
+    <img src="img/logo.jpg" alt="DLK Logo" height="120">
+  </header>
+
+  <!-- Main content -->
+  <div class="container mb-5">
+    <div class="row g-4">
+      <!-- Hình ảnh sản phẩm -->
+    <div class="col-md-6 d-flex">
+    <!-- Ảnh nhỏ bên trái -->
+    <div class="d-flex flex-column me-3">
+      <img src="img/anh2.jpg" class="img-thumbnail mb-2" width="250" alt="">
+      <img src="img/anh3.jpg" class="img-thumbnail mb-2" width="250" alt="">
+      <img src="img/anh4.jpg" class="img-thumbnail mb-2" width="250" alt="">
+      <img src="img/anh1.jpg" class="img-thumbnail mb-2" width="250" alt="">
+    </div>
+  
+    <!-- Ảnh lớn bên phải -->
+    <div class="flex-grow-1">
+      <img src="img/anh1.jpg" class="img-fluid rounded mb-3" alt="Mặt dây chuyền">
+    </div>
+  </div>
+  
+
+      <!-- Thông tin sản phẩm -->
+      <div class="col-md-6">
+        <h4 class="fw-bold">Mặt dây chuyền Kim cương Vàng trắng 14K DLK DDDD000611</h4>
+        <p class="text-danger fs-4 fw-semibold">11.427.000₫</p>
+        <p>Gọi đặt hàng: <strong>1800 5454 57</strong> (miễn phí)</p>
+
+        <div class="bg-light p-3 rounded mb-3">
+          <h6 class="fw-semibold">Ưu đãi:</h6>
+          <ul class="mb-0">
+            <li>Tặng kiểm định kim cương từ Viện Artisan Stones</li>
+            <li>Miễn phí giao hàng nội thành trong 2h</li>
+            <li>Đổi hàng lỗi kỹ thuật trong 48h</li>
+            <li>Làm sạch, đánh bóng trọn đời</li>
+          </ul>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button class="btn btn-danger">MUA NGAY</button>
+          <button class="btn btn-outline-secondary">Giữ hàng tại cửa hàng</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mt-5" id="productTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#details" type="button">Thông tin sản phẩm</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#description" type="button">Mô tả</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq" type="button">Câu hỏi thường gặp</button>
+      </li>
+    </ul>
+    <div class="tab-content border border-top-0 p-4">
+      <!-- Chi tiết sản phẩm -->
+      <div class="tab-pane fade show active" id="details">
+        <table class="table table-bordered">
+          <tbody>
+            <tr><th>Trọng lượng</th><td>2.74723 phân</td></tr>
+            <tr><th>Loại đá chính</th><td>Kim cương</td></tr>
+            <tr><th>Khối lượng đá</th><td>3.3 phân</td></tr>
+            <tr><th>Kiểu chế tác</th><td>Trang sức</td></tr>
+            <tr><th>Hình dạng đá</th><td>Tròn (Facet)</td></tr>
+            <tr><th>Số viên đá chính</th><td>1</td></tr>
+            <tr><th>Số viên đá phụ</th><td>10</td></tr>
+            <tr><th>Chất liệu</th><td>Vàng trắng 14K</td></tr>
+            <tr><th>Bộ sưu tập</th><td>First Diamond</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mô tả -->
+      <div class="tab-pane fade" id="description">
+        <p>Mặt dây chuyền được chế tác từ vàng trắng 14K và kim cương tự nhiên với kiểu cắt tinh tế giúp phản chiếu ánh sáng tối đa. Thiết kế đơn giản, sang trọng phù hợp làm quà tặng hoặc sử dụng hàng ngày.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="tab-pane fade" id="faq">
+        <p><strong>Sản phẩm có kiểm định không?</strong><br>
+        → Có, được kiểm định từ Viện Artisan Stones.</p>
+        <p><strong>Chính sách đổi trả?</strong><br>
+        → Đổi sản phẩm trong 48h nếu phát hiện lỗi kỹ thuật.</p>
+        <p><strong>Trả góp?</strong><br>
+        → Hỗ trợ trả góp 0% qua thẻ tín dụng.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 text-center">
+    <p class="mb-1"><strong>DLK - Công ty Cổ phần Vàng Bạc Đá Quý</strong></p>
+    <p>170E Phan Đăng Lưu, P. Đức Nhân, TP.HCM - ĐT: 0321 821 361</p>
+    <div>
+      <a href="#" class="text-decoration-none me-3">Quan hệ cổ đông</a>
+      <a href="#" class="text-decoration-none me-3">Tuyển dụng</a>
+      <a href="#" class="text-decoration-none me-3">Kiểm định kim cương</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

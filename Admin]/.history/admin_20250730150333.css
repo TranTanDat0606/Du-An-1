@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* header */
+/* Topbar admin */
+.topbar {
+    background-color: #2f2e38;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    font-size: 24px;
+}
+
+.topbar-left {
+    font-weight: bold;
+}
+
+.topbar-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    border-left: 1px solid #555;
+    padding-left: 15px
+}
+
+.topbar-right a:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+body {
+    background: #f5f5f5;
+}
+
+.admin-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.sidebar .submenu {
+    margin-left: 15px;
+}
+
+.sidebar a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: #fff;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumbs {
+    color: #555;
+    font-size: 14px;
+}
+
+.btn-new {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table-toolbar {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input {
+    padding: 6px 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #f2f2f2;
+}
+
+.text-danger {
+    color: red;
+    text-align: center;
+}

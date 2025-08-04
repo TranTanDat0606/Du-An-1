@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Quản lý danh mục</title>
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+<header class="admin-navbar">
+    <div class="admin-navbar-item left">Adminnistrator</div>
+    <a href="#" class="admin-navbar-item">← Vào trang web</a>
+    <a href="#" class="admin-navbar-item">Liên hệ</a>
+    <a href="#" class="admin-navbar-item">Đơn hàng</a>
+</header>
+    <div class="admin-container">
+<div class="admin-sidebar">
+    <div class="admin-title">Trang chủ Admin</div>
+    <div class="dropdown">
+        <input type="checkbox" id="menu-toggle"/>
+        <label for="menu-toggle" class="dropdown-label">☑ Quản trị Danh mục ▼</label>
+</div>
+</div>   
+    <div class="admin-main">
+        <div class="breadcrumb">
+            <a href="#">Trang chủ</a> → <a href="#">Danh mục</a> → <span>Loại danh mục</span> → <span>Loại danh mục</span>
+        </div>
+        <div class="toolbar">
+            <div class="actions">
+                <label for="bulk-action">Tác vụ</label>
+                <select id="bulk-action">
+                    <option>↓</option>
+                </select>
+            </div>
+            <input type="text" placeholder="Tìm kiếm" class="search-box"/>
+            <select  class="filter"></select>
+        </div>
+    </div>
+    
+        </li>
+        <a href="#"><li>→ Sản phẩm</li></a>
+        <a href="#"><li>→ Bài viết</li></a>
+        <a href="#"><li>→ Quản trị giao diện</li></a>
+        <a href="#"><li>$ Quản trị thông tin</li></a>
+        <a href="#"><li>⋯ SEO Website</li></a>
+        <a href="#"><li>→ Cấu hình User</li></a>
+    </ul>
+    </aside>
+    <main class="main-content">
+    <div class="header-bar">
+        <span class="breadcrumbs"><a href="#">Trang chủ→ </a><a href="#">Danh mục → </a><a href="#">Loại danh mục</a></span>
+        <button class="btn-new">+ Thêm mới</button>
+    </div>
+
+    <div class="table-toolbar">
+        <input type="text" class="search-input" placeholder="Tìm kiếm" />
+        <select>
+    <option>Số hiển thị</option>
+        </select>
+    </div>  
+    <table>
+        <thead>
+    <tr>
+            <th><input type="checkbox" /></th>
+            <th>STT</th>
+            <th>Danh mục</th>
+            <th>Hình ảnh</th>
+            <th>Module</th>
+            <th>Trang chủ</th>
+            <th>Danh mục</th>
+            <th>Hiển thị</th>
+            <th>Tác vụ</th>
+    </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td><input type="checkbox" /></td>
+            <td>1</td>
+            <td><a href="#">Giới thiệu</a></td>
+            <td>--</td>
+            <td>Bài viết</td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" /></td>
+            <td class="text-danger">✖</td>
+    </tr>
+    <tr>
+            <td><input type="checkbox" /></td>
+            <td>2</td>
+            <td><a href="#">Sản phẩm</a></td>
+            <td>--</td>
+            <td>Sản Phẩm</td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" checked /></td>
+            <td><input type="checkbox" /></td>
+            <td class="text-danger">✖</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" /></td>
+        <td>11</td>
+        <td><a href="#">Vòng phong hoàng</a></td>
+        <td>--</td>
+        <td>Sản Phẩm</td>
+        <td><input type="checkbox" checked /></td>
+        <td><input type="checkbox" checked /></td>
+        <td><input type="checkbox" /></td>
+        <td class="text-danger">✖</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" /></td>
+        <td>12</td>
+        <td><a href="#">Dây chuyền vòng vàng</a></td>
+        <td>--</td>
+        <td>Sản Phẩm</td>
+        <td><input type="checkbox" checked /></td>
+        <td><input type="checkbox" checked /></td>
+        <td><input type="checkbox" /></td>
+        <td class="text-danger">✖</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" /></td>
+        <td>7</td>
+        <td><a href="#">Giỏ hàng</a></td>
+        <td>--</td>
+        <td>Giỏ hàng</td>
+        <td><input type="checkbox" checked /></td>
+        <td><input type="checkbox" checked /></td>
+        <td><input type="checkbox" /></td>
+        <td class="text-danger">✖</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" /></td>
+        <td>6</td>
+        <td><a href="#">Tin tức</a></td>
+        <td>--</td>
+        <td>Bài viết</td>
+        <td><input type="checkbox" checked /></td>  
+        <td><input type="checkbox" checked /></td>
+        <td><input type="checkbox"/></td>
+        <td class="text-danger">✖</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="" id=""></td>
+        <td>7</td>
+        <td><a href="#"> Liên hệ </a></td>
+        <td>--</td>
+        <td>Liên hệ</td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td class="text-danger">✖</td>
+    </tr>
+        </tbody>
+    </table>
+    </main>
+    </div>
+</body>
+</html>
