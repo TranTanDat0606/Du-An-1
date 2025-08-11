@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .header {
@@ -14,11 +14,11 @@
   gap: 10px;
 }
 body {
-  background-color: #ffe6e6;
-  padding: 40px 0;
+  padding: 0;
 }
 
 .container {
+  padding: 50px 0;
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -119,10 +119,15 @@ form textarea {
   height: 60px;
 }
 
+.form-title-payment {
+  margin-left: 53px;
+  font-size: 21px !important;
+}
+
 .gender-row {
   display: flex;
   gap: 20px;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .checkboxes {
@@ -135,7 +140,6 @@ form textarea {
   font-size: 13px;
 }
 .site-header {
-  background-color: #ffe8e8;
   padding-top: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #ccc;
@@ -161,12 +165,28 @@ form textarea {
   display: inline-flex;
   gap: 20px;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .main-nav a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
   color: #333;
   font-weight: 500;
+  padding: 8px 12px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  font-size: 14px;
+}
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.253);
 }
 
 .search-box {
@@ -184,7 +204,6 @@ form textarea {
   width: 160px;
 }
 .site-footer {
-  background-color: #ffe8e8;
   border-top: 1px solid #b48d7f;
   padding: 40px 20px;
   font-size: 14px;
@@ -236,6 +255,8 @@ form textarea {
   background-color: #c88542;
 }
 .order-button {
+  margin-top: 40px;
+  margin-left: 120px;
   background: linear-gradient(135deg, #d9a95b, #c78a3e);
   color: white;
   padding: 12px 28px;
@@ -259,8 +280,8 @@ form textarea {
   padding: 30px;
   background: #fffaf5;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
 }
 
 .payment-title {
@@ -277,7 +298,8 @@ form textarea {
   flex-wrap: wrap;
 }
 
-.summary-left, .summary-right {
+.summary-left,
+.summary-right {
   flex: 1;
   min-width: 300px;
 }
@@ -336,10 +358,3 @@ form textarea {
 #qr-section.show {
   display: block;
 }
-
-
-
-
-
-
-
