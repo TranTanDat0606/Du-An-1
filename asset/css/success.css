@@ -1,0 +1,109 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Toàn trang */
+body {
+    background: radial-gradient(circle at top, #fffaf5, #fbeed8);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Khung thông báo */
+.success-container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+    max-width: 500px;
+    border: 2px solid #d4af37;
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Icon check animation */
+.success-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+}
+
+.success-circle {
+    stroke: #d4af37;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-linecap: round;
+    animation: stroke 0.6s ease forwards;
+}
+
+.success-check {
+    stroke: #d4af37;
+    stroke-width: 2;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke-linecap: round;
+    animation: stroke 0.4s ease forwards 0.6s;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 28px;
+    color: #d4af37;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Nội dung */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Nút quay về */
+.btn-home {
+    display: inline-block;
+    background: #d4af37;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.btn-home:hover {
+    background: #b8902d;
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.6);
+}
+
+/* Hiệu ứng animation */
+@keyframes stroke {
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

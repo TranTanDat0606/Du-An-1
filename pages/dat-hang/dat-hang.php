@@ -1,4 +1,14 @@
-<?php include('../../layouts/header.php'); ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Gọi CSS merged -->
+    <link rel="stylesheet" href="../../asset/css/style2.css">
+    <!-- Icon fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>DLK shop</title>
+</head>
+
+<?php include '../../layouts/header.php'; ?>
 <div class="container">
     <!-- HÌNH ẢNH + MÔ TẢ SẢN PHẨM -->
     <div class="product-info">
