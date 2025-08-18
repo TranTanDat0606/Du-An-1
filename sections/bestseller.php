@@ -4,11 +4,13 @@
         <h2 class="section-title">Sản phẩm bán chạy</h2>
         <div class="bestseller-grid">
             <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/daychuyen.jpg" alt="Sản phẩm 1">
-                </div>
-                <h3 class="bestseller-name">Dây Chuyền A</h3>
-                <div class="bestseller-price">12.000.000đ</div>
+                <a href="detail.php">
+                    <div class="bestseller-img">
+                        <img src="image/daychuyen.jpg" alt="Sản phẩm 1">
+                    </div>
+                    <h3 class="bestseller-name">Dây Chuyền A</h3>
+                    <div class="bestseller-price">12.000.000đ</div>
+                </a>
             </div>
             <div class="bestseller-item">
                 <div class="bestseller-img">

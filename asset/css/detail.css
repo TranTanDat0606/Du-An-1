@@ -1,0 +1,265 @@
+/* Product page */
+.product-page {
+  display: flex;
+  gap: 2rem;
+  margin-top: 80px !important;
+}
+
+.product-gallery {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-gallery img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.thumbnails-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnails-vertical img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border 0.2s;
+}
+
+.thumbnails-vertical img:hover {
+  border: 2px solid #22c55e;
+}
+
+#main-image {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.product-info {
+  width: 50%;
+}
+
+.price {
+  color: #e11d48;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+button {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.6rem 1.2rem;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.tabs button {
+  background: #f3f4f6;
+  margin: 0.5rem 0.5rem 0 0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tab-content {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+/* Logo Top */
+.logo-top {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.logo-top img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Form styling */
+.form-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 15px;
+}
+
+.input-text {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-text:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+  outline: none;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: #22c55e;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+}
+
+.offers {
+  background: linear-gradient(to right, #fff8f1, #fffdf8);
+  border: 1px solid #f3e5d3;
+  padding: 20px 25px;
+  margin: 25px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+}
+.offers-deal {
+  font-size: 16px;
+  color: #ff0000;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.offers-deal-time {
+  font-size: 14px;
+  color: #6b7280;
+  padding-left: 23px;
+}
+
+.offers-boder {
+  border: 1px solid #ffd8a5;
+  width: 100%;
+  margin: 10px 0 20px;
+}
+
+.offers:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.offers ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offers li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  font-size: 15.5px;
+  color: #5a4231;
+}
+
+.offers li::before {
+  content: "🎁";
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.offers a {
+  color: #c57224;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.offers a:hover {
+  text-decoration: underline;
+  color: #a85312;
+}
+
+.offers li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.offers a {
+  color: #d48d3f;
+  text-decoration: underline;
+}
+
+.buy-now {
+  background-color: rgb(0, 136, 255);
+}
+
+.buy-now:hover {
+  background-color: rgb(0, 136, 255);
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.add-cart {
+  background-color: #ff8400;
+}
+
+.add-cart:hover {
+  background-color: #ff8400;
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.tabs {
+  width: 100%;
+  margin-right: 30px;
+}
+
+.tab button {
+  background-color: rgb(0, 136, 255);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.description {
+  font-size: 16px;
+  color: #4a5568;
+  margin: 20px 0;
+}
+
+.tab-content ul li {
+  margin-left: 20px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  list-style-type: "🔹 ";
+}

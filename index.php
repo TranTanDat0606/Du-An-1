@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Gọi CSS merged -->
-    <link rel="stylesheet" href="asset/css/style2.css">
+
+    <!-- Gọi CSS merged cho body -->
+    <link rel="stylesheet" href="asset/css/home.css">
+
     <!-- Icon fonts -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <title>DLK shop</title>
+
+    <title>DLK Shop</title>
 </head>
 
 <body>
@@ -39,15 +42,11 @@
 
 
     <section class="bottom-banner">
-        <div class="container">
-            <div class="bottom-banner-content">
-                <img src="image/24-chuong-trinh-youth-1972x640-CTA.png" alt="Banner Khuyến Mãi">
-            </div>
-        </div>
+        <img class="bottom-banner-image" src="image/24-chuong-trinh-youth-1972x640-CTA.png" alt="Banner Khuyến Mãi">
     </section>
 
 
-    <?php include 'footer.php'; ?>
+    <?php include 'layouts/footer.php'; ?>
 
     <script src="asset/js/script.js"></script>
 </body>
