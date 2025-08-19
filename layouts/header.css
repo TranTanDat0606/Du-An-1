@@ -147,3 +147,34 @@ header .row-flex {
     font-size: 14px;
   }
 }
+
+/* Header Cart */
+.header-cart {
+  margin-right: 30px;
+  position: relative; /* Đảm bảo giỏ hàng không bị chồng lên các phần tử khác */
+}
+
+.header-cart i {
+  font-size: larger;
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* Đảm bảo icon giỏ hàng luôn ở trên */
+}
+
+.header-cart i::after {
+  content: attr(number);
+  position: absolute;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: -10px;
+  background-color: black;
+  border-radius: 50%;
+  color: var(--main-color);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: smaller;
+  z-index: 3; /* Đảm bảo số lượng giỏ hàng luôn hiển thị trên icon */
+}

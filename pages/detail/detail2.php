@@ -1,6 +1,5 @@
 <?php
 // Kết nối cơ sở dữ liệu
-session_start();
 include $_SERVER['DOCUMENT_ROOT'] . '/Du-An-1/Du-An-1/config/db.php';
 
 // Lấy id từ URL
@@ -19,24 +18,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "Sản phẩm không tồn tại.";
     exit;
-}
-
-// Thêm vào giỏ hàng nếu form được submit
-if (isset($_POST['add_to_cart'])) {
-    // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
-    if (isset($_SESSION['cart'][$product_id])) {
-        $_SESSION['cart'][$product_id]['quantity']++;
-    } else {
-        $_SESSION['cart'][$product_id] = [
-            'name' => $product['name'],
-            'price' => $product['price'],
-            'image_url' => $product['image_url'],
-            'quantity' => 1
-        ];
-    }
-    // Sau khi thêm vào giỏ, chuyển hướng về giỏ hàng
-    header("Location: ../cart/cart.php");
-    exit();
 }
 ?>
 
@@ -80,30 +61,14 @@ if (isset($_POST['add_to_cart'])) {
                 </div>
 
                 <div class="tab-content" id="specs">
-                    <p class="description">
-                        <?php 
-        if (isset($product['description']) && !empty($product['description'])) {
-            echo $product['description']; 
-        } else {
-            echo "Mô tả sản phẩm không có sẵn."; // Nếu không có mô tả, hiển thị thông báo thay thế
-        }
-    ?>
-                    </p>
+                    <p class="description"><?php echo $product['description']; ?></p>
                 </div>
 
                 <div class="tab-content" id="detail">
                     <ul>
                         <li><strong>Giá:</strong> <?php echo number_format($product['price'], 0, ',', '.') . 'đ'; ?>
                         </li>
-                        <li><strong>Tình trạng:</strong> mới 100%</li>
-                        <li><strong>Chất liệu: </strong>Vàng trắng 14K</li>
-                        <li><strong>Loại đá:</strong> Kim cương thiên nhiên</li>
-                        <li><strong>Trọng lượng</strong> vàng: 500g</li>
-                        <li><strong>Trọng lượng kim cương:</strong> 5 carat</li>
-                        <li><strong>Màu sắc kim cương:</strong> D </li>
-                        <li><strong>Độ tinh khiết:</strong> VS1</li>
-                        <li><strong>Kích thước mặt dây:</strong> 7mm </li>
-                        <li><strong>Phong cách:</strong> Hiện đại, tinh tế</li>
+                        <li><strong>Tình trạng:</strong> <?php echo $product['status']; ?></li>
                     </ul>
                 </div>
 
@@ -121,30 +86,25 @@ if (isset($_POST['add_to_cart'])) {
                     <p class="offers-deal"> 🔥 Khuyến mãi trị giá 100.000₫</p>
                     <p class="offers-deal-time">Giá và khuyến mãi dự kiến áp dụng đến 23:00 | 31/08</p>
                     <div class="offers-boder"></div>
-                    <ul>
-                        <li>Giảm ngay 10% cho đơn hàng đầu tiên <a href="#">Xem chi tiết</a></li>
-                        <li>Cơ hội tận hưởng đặc quyền triệu dặm thưởng từ Vietnam Airlines <a href="#">Xem chi tiết</a>
-                        </li>
-                        <li>Cơ hội sở hữu 01 chỉ vàng mỗi ngày <a href="#">Xem chi tiết</a></li>
-                        <li>Ưu đãi ngay 300.000Đ cho mỗi đơn 10 triệu <a href="#">Xem chi tiết</a></li>
-                        <li>Tặng trang sức trị giá đến 1 triệu <em>(Chỉ áp dụng tại 100 cửa hàng chọn lọc)</em> <a
-                                href="#">Xem chi tiết</a></li>
-                        <li>Ưu đãi thêm lên đến 300K khi thanh toán quét VNPAY-QR</li>
-                        <li>Ưu đãi thêm 1.000.000Đ khi thanh toán bằng thẻ TECHCOMBANK <a href="#">Xem chi tiết</a></li>
-                        <li>Ưu đãi thêm lên đến 500.000Đ khi thanh toán bằng thẻ NCB <a href="#">Xem chi tiết</a></li>
-                    </ul>
                 </div>
+                <ul>
+                    <li>Giảm ngay 10% cho đơn hàng đầu tiên <a href="#">Xem chi tiết</a></li>
+                    <li>Cơ hội tận hưởng đặc quyền triệu dặm thưởng từ Vietnam Airlines <a href="#">Xem chi tiết</a>
+                    </li>
+                    <li>Cơ hội sở hữu 01 chỉ vàng mỗi ngày <a href="#">Xem chi tiết</a></li>
+                    <li>Ưu đãi ngay 300.000Đ cho mỗi đơn 10 triệu <a href="#">Xem chi tiết</a></li>
+                    <li>Tặng trang sức trị giá đến 1 triệu <em>(Chỉ áp dụng tại 100 cửa hàng chọn lọc)</em> <a
+                            href="#">Xem chi tiết</a></li>
+                    <li>Ưu đãi thêm lên đến 300K khi thanh toán quét VNPAY-QR</li>
+                    <li>Ưu đãi thêm 1.000.000Đ khi thanh toán bằng thẻ TECHCOMBANK <a href="#">Xem chi tiết</a></li>
+                    <li>Ưu đãi thêm lên đến 500.000Đ khi thanh toán bằng thẻ NCB <a href="#">Xem chi tiết</a></li>
+                </ul>
             </div>
 
             <p class="price"><?php echo number_format($product['price'], 0, ',', '.') . 'đ'; ?></p>
-            <div class="action-detail" style="display: flex; margin-top: 10px; gap: 10px;">
-                <a href="../dat-hang/dat-hang.php"><button class="buy-now">MUA NGAY</button></a>
-                <form method="POST">
-                    <button type="submit" name="add_to_cart" class="add-cart">THÊM VÀO GIỎ</button>
-                </form>
-            </div>
-
-
+            <!-- <p class="status"><?php echo $product['status']; ?></p> -->
+            <a href="../dat-hang/dat-hang.php"><button class="buy-now">MUA NGAY</button></a>
+            <a href="../cart/cart.php"><button class="add-cart">THÊM VÀO GIỎ</button></a>
         </div>
     </main>
 

@@ -1,66 +1,37 @@
-<!-- Sản phẩm bán chạy -->
+<?php include __DIR__ . '/../config/db.php'; ?>
+
 <section class="bestseller-section">
     <div class="container">
         <h2 class="section-title">Sản phẩm bán chạy</h2>
         <div class="bestseller-grid">
+            <?php
+           $sql = "SELECT id, name, price, image
+        FROM product
+        WHERE status = 1 AND id BETWEEN 13 AND 20
+        ORDER BY id ASC
+        LIMIT 8";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0):
+    while ($row = $result->fetch_assoc()):
+        $price_formatted = number_format($row['price'], 0, ',', '.') . 'đ';
+        ?>
             <div class="bestseller-item">
-                <a href="detail.php">
+                <a href="pages/detail/detail.php?id=<?php echo $row['id']; ?>">
+
                     <div class="bestseller-img">
-                        <img src="image/daychuyen.jpg" alt="Sản phẩm 1">
+                        <img src="<?php echo htmlspecialchars($row['image']); ?>"
+                            alt="<?php echo htmlspecialchars($row['name']); ?>">
                     </div>
-                    <h3 class="bestseller-name">Dây Chuyền A</h3>
-                    <div class="bestseller-price">12.000.000đ</div>
+                    <h3 class="bestseller-name"><?php echo htmlspecialchars($row['name']); ?></h3>
+                    <div class="bestseller-price"><?php echo $price_formatted; ?></div>
                 </a>
             </div>
-            <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/daychuyen1.jpg" alt="Sản phẩm 2">
-                </div>
-                <h3 class="bestseller-name">Dây Chuyền B</h3>
-                <div class="bestseller-price">8.500.000đ</div>
-            </div>
-            <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/daychuyen2.jpg" alt="Sản phẩm 3">
-                </div>
-                <h3 class="bestseller-name">Dây Chuyền C</h3>
-                <div class="bestseller-price">5.200.000đ</div>
-            </div>
-            <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/bongtai.jpg" alt="Sản phẩm 4">
-                </div>
-                <h3 class="bestseller-name">Bông Tai</h3>
-                <div class="bestseller-price">25.000.000đ</div>
-            </div>
-            <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/daychuyen.jpg" alt="Sản phẩm 5">
-                </div>
-                <h3 class="bestseller-name">Dây Chuyền D</h3>
-                <div class="bestseller-price">7.900.000đ</div>
-            </div>
-            <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/daychuyen1.jpg" alt="Sản phẩm 6">
-                </div>
-                <h3 class="bestseller-name">Dây Chuyền V</h3>
-                <div class="bestseller-price">6.300.000đ</div>
-            </div>
-            <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/daychuyen2.jpg" alt="Sản phẩm 7">
-                </div>
-                <h3 class="bestseller-name">Dây Chuyền P</h3>
-                <div class="bestseller-price">15.000.000đ</div>
-            </div>
-            <div class="bestseller-item">
-                <div class="bestseller-img">
-                    <img src="image/bongtai.jpg" alt="Sản phẩm 8">
-                </div>
-                <h3 class="bestseller-name">Bông Tai A</h3>
-                <div class="bestseller-price">9.800.000đ</div>
-            </div>
+            <?php
+    endwhile;
+else:
+    echo "<p>Không có sản phẩm bán chạy nào.</p>";
+endif;
+            ?>
         </div>
     </div>
 </section>

@@ -1,6 +1,17 @@
 <?php
 // Liên kết đến file header.css
 echo '<link rel="stylesheet" href="/header.css">';
+// Kiểm tra nếu session chưa được khởi tạo
+if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Bắt đầu session
+}
+    $cart_count = 0;
+    if (isset($_SESSION['cart'])) {
+        // Đếm tổng số lượng sản phẩm trong giỏ
+        foreach ($_SESSION['cart'] as $product) {
+            $cart_count += $product['quantity'];
+        }
+    }
 ?>
 
 <header>
@@ -31,8 +42,12 @@ echo '<link rel="stylesheet" href="/header.css">';
                 <i class="ri-user-line"></i>
                 <a href="#">Tài khoản của tôi</a>
             </div>
+
             <a href="cart.php" class="header-cart">
-                <i class="ri-shopping-cart-line" number="0"></i>
+                <i class="ri-shopping-cart-line"></i>
+                <span class="cart-count"
+                    style="position: absolute; color: #fff; top: 95px; right: 389px;"><?php echo $cart_count; ?></span>
+                <!-- Hiển thị số lượng sản phẩm -->
             </a>
         </div>
     </div>
